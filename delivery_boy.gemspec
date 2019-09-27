@@ -20,7 +20,11 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "ruby-kafka", "~> 0.7.8"
+  # remove dep which now means it is required to reference
+  # ruby-kafka from the top level app.  This is done so we
+  # can point to rentpath/ruby-kafka which has updates that use
+  # the prometheus v0.10.0.pre.alpha2 api for metrics
+  # spec.add_runtime_dependency "ruby-kafka", "~> 0.7.8"
   spec.add_runtime_dependency "king_konf", "~> 0.3"
 
   spec.add_development_dependency "bundler", "~> 1.15"
